@@ -106,7 +106,33 @@ class Page extends CI_Controller
 	function contact_us()
 	{
 		$data = filter_forwarded_data($this);
-		
+
+		# User has posted a message
+		if(!empty($_POST))
+		{
+			$passed = process_fields($this, $this->input->post(NULL, TRUE), array('yourname','emailaddress', 'reason__contactreason', 'details'), array('@','!'));
+			$data['msg'] = !empty($passed['msg'])? $passed['msg']: "";
+
+			# All required fields are included? Then send the message to the admin
+			if($passed['boolean'])
+			{
+				$details = $passed['data'];
+
+				$data['result'] = $this->_messenger->send_email_message('', array('code'=>'contact_us_message', 'emailfrom'=>NOREPLY_EMAIL, 'telephone'=>(!empty($details['telephone'])? $details['telephone']:''), 'fromname'=>SITE_GENERAL_NAME, 'cc'=>$details['emailaddress'], 'useremailaddress'=>$details['emailaddress'], 'usernames'=>$details['yourname'], 'subject'=>$details['reason__contactreason'], 'details'=>$details['details'], 'emailaddress'=>HELP_EMAIL, 'login_link'=>base_url(), 'sent_time'=>date('d-M-Y h:ia T', strtotime('now')) ));
+
+				if($data['result'])
+				{
+					$this->native_session->delete_all(array('yourname'=>'','emailaddress'=>'', 'reason__contactreason'=>'', 'details'=>''));
+					$data['msg'] = "Your message has been sent. We shall respond as soon as possible.";
+				}
+				else $data['msg'] = "ERROR: There was a problem sending your message";
+			}
+			else
+			{
+				$data['msg'] = "WARNING: There is a problem with the data you submitted.";
+			}
+		}
+
 		$this->load->view('page/contact_us', $data);
 	}
 	

@@ -33,7 +33,7 @@
  */
 	define('SECURE_MODE', FALSE);
 	
-	define('BASE_URL', 'http://localhost:8888/pss/');#Set to HTTPS:// if SECURE_MODE = TRUE
+	define('BASE_URL', 'http://localhost/pss/');#Set to HTTPS:// if SECURE_MODE = TRUE
 
 	define('RETRIEVE_URL_DATA_IGNORE', 3);#The starting point to obtain the passed url data
 	
@@ -147,6 +147,22 @@
 	define('DBDRIVER', "mysqli");
 	
 	define('DBPORT', "3306");
+
+/*
+ *---------------------------------------------------------------
+ * COMMUNICATION SETTINGS
+ *---------------------------------------------------------------
+ */
+
+define("NOREPLY_EMAIL", "");#TODO set no-reply email
+
+define("HELP_EMAIL", ""); #TODO set help email
+
+define('SITE_ADMIN_MAIL', ""); #TODO set site admin email
+
+define('SITE_ADMIN_NAME', ""); #TODO set site admin name
+
+define('SITE_GENERAL_NAME', "PSS");
 
 
 ?>
