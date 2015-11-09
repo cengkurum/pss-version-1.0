@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IDE related files #
 ######################
 .classpath
@@ -27,3 +28,6 @@
 *.log
 *.sql
 *.sqlite
+=======
+# Created by .ignore support plugin (hsz.mobi)
+>>>>>>> 82c937c3a35b8a16d22c597021a5758023368ac8

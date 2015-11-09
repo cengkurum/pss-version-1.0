@@ -52,8 +52,8 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database', 'session', 'user_agent', 'native_session');
 
+$autoload['libraries'] = array('database', 'session', 'user_agent', 'native_session');
 
 /*
 | -------------------------------------------------------------------
@@ -63,6 +63,7 @@ $autoload['libraries'] = array('database', 'session', 'user_agent', 'native_sess
 |
 |	$autoload['helper'] = array('url', 'file');
 */
+
 
 $autoload['helper'] = array('url', 'cookie', 'common_functions', 'dropdown');
 

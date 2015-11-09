@@ -48,7 +48,7 @@
 }
 
 .closer {
-	background: url(../../assets/images/grey_closer.png) no-repeat center center; 
+	background: url(../../assets/images/grey_closer.png) no-repeat center center;
 	width: 20px;
 	cursor:pointer;
 }
@@ -143,13 +143,12 @@
 @media only screen and (max-width:900px){
 
 
-.home-list-table {
-	width: 100%;
-}
+	.home-list-table {
+		width: 100%;
+	}
 
 
 }
-
 
 
 
