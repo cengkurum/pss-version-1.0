@@ -1,0 +1,62 @@
+/* CSS Document */
+
+#__shadowbox, #__waitbox {
+	background: rgb(0, 0, 0); /* Fallback */
+	background: rgba(0, 0, 0, 0.6); 
+	position:fixed;
+	z-index: 10000;
+}
+
+#__shadowbox iframe {
+	overflow:hidden;
+	position:absolute;
+	background-color: #FFF;
+	padding: 25px;
+	z-index: 1000;
+}
+
+#__shadowbox iframe.black {
+	background-color: #000;
+}
+
+
+#__waitbox div {
+	overflow:hidden;
+	position:absolute;
+	padding: 25px;
+	width: 60px;
+	height: 60px;
+	background: url(../../assets/images/loading.gif) no-repeat center center #FFF;
+	z-index: 1000;
+}
+
+
+#__shadowbox_closer {
+	background: url(../../assets/images/grey_closer.png) no-repeat center center;
+	width: 20px;
+	height: 20px;
+	position:absolute;
+	z-index: 9999;
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+/* CSS for mobile */
+@media only screen and (max-width:700px){
+
+#__shadowbox, #__waitbox {
+	background: rgb(255, 255, 255); /* Fallback */
+	background: rgba(255, 255, 255, 1); 
+	position:fixed;
+	top: 0px;
+	z-index: 10000;
+}
+	
+}

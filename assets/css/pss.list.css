@@ -1,0 +1,167 @@
+/* CSS Document */
+
+.home-list-table {
+	border-collapse:collapse;
+	border: 1px solid #999;
+	border-top: 5px solid #999;
+	width: 100%;
+	min-width: 240px;
+	background-color: #F8F8F8;
+}
+
+.home-list-table > tbody > tr > th {
+	padding: 5px;
+	padding-left: 35px;
+	text-align: left;
+}
+
+.home-list-table > tbody > tr:last-child {
+	background-color: #FFF;
+	border-top: 1px solid #999;
+}
+
+.home-list-table > tbody > tr:last-child > td {
+	padding: 2px 5px;
+}
+
+
+.home-list-div {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 20vh;
+}
+.home-list-div > table {
+	width: 100%;
+	font-size: 13px;
+	border-collapse:collapse;
+}
+.home-list-div > table > tbody > tr:nth-child(odd) {
+	background-color: #F8F8F8;
+}
+.home-list-div > table > tbody > tr:nth-child(even) {
+	background-color: #FFF;
+}
+.home-list-div > table > tbody > tr > td {
+	vertical-align: top;
+	padding: 5px;
+}
+
+.closer {
+	background: url(../../assets/images/grey_closer.png) no-repeat center center; 
+	width: 20px;
+	cursor:pointer;
+}
+
+
+.filter-list {
+	background: url(../../assets/images/search_icon_blue_small.png) no-repeat right center;
+	font-size: 11px;
+	font-weight: 800;
+	color: #010166;
+	padding-right: 20px !important;
+	cursor: pointer;
+}
+
+.load-more {
+	background: url(../../assets/images/down_arrow_blue.png) no-repeat right center;
+	font-size: 11px;
+	font-weight: 800;
+	color: #010166;
+	padding-right: 20px !important;
+	padding-left: 40px !important;
+	cursor: pointer;
+}
+
+
+.list-tabs {
+	width: 100%;
+	border-collapse:collapse;
+}
+
+.list-tabs td {
+	padding: 8px 15px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	font-weight: 800;
+	font-size: 13px;
+	color: #333;
+	cursor: pointer;
+}
+
+.list-tabs td:not(:last-child) {
+	word-wrap: break-word !important;
+}
+.list-tabs td:last-child {
+	border-right: 0px;
+	word-wrap: break-word !important;
+}
+
+.list-tabs td.active {
+	background: url(../../assets/images/grey_border.png) repeat-x left bottom;
+	color: #010166;
+	cursor: default;
+}
+
+.page-list-div {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 46vh;
+}
+
+.page-list-div > div > table {
+	width: 100%;
+	border-collapse:collapse;
+}
+.page-list-div > div > table > tbody > tr:first-child {
+	background-color: #FFF;
+}
+.page-list-div > div > table > tbody > tr > th {
+	color: #010166;
+	font-weight:bold;
+	padding: 7px;
+	text-align: left;
+}
+.page-list-div > div > table > tbody > tr > td {
+	padding: 7px;
+}
+.page-list-div > div > table > tbody > tr:nth-child(odd) {
+	background-color: #F8F8F8;
+}
+.page-list-div > div > table > tbody > tr:nth-child(even) {
+	background-color: #FFF;
+}
+
+
+
+
+
+
+/* CSS for small screens */
+@media only screen and (max-width:900px){
+
+
+.home-list-table {
+	width: 100%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+/* Functionality to format and show pagination*/
+.paginationdiv {
+	border-left: solid 1px #DDD;
+	border-right: solid 1px #DDD;
+	color: #2C9FD1;
+	font-weight: bold;
+	white-space:nowrap !important; 
+	margin: 0 auto;
+}
+
+
+
+.paginationdiv > div {
+	border-top: solid 1px #DDD;
+	border-bottom: solid 1px #DDD;
+	padding: 5px 10px 5px 10px;
+	cursor: pointer;
+	display: inline-block;
+	background-color: #FFF; 
+}
+
+
+.paginationdiv div:not(:first-child):not(:nth-child(2)) {
+	border-left: solid  1px #DDD;
+}
+
+
+.paginationdiv a {
+	color: #2C9FD1;
+	text-decoration:none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.paginationdiv .selected {
+	background-color: #2C9FD1;
+	color: #FFF;
+	font-weight: 900;
+}
+
+.paginationlist {
+	padding: 2px;
+	margin-bottom: 10px;
+	min-height: 60px;
+}
+
+.nextbtn {
+	border-left: solid 1px #DDD;
+}
+
+.rightborder {
+		border-right: solid 1px #DDD;
+}
+
+.leftborder {
+		border-left: solid 1px #DDD;
+}
+
+.pagination.center {
+	left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.pagination.right {
+	float: right;
+}
+
+
+
+.pagination.left {
+	float: left;
+}
